@@ -16,6 +16,8 @@ import com.example.fitme_up.VenueOwnerActivity
 import com.example.fitme_up.feature_login.data.service.request.LoginRequest
 import com.example.fitme_up.feature_login.presentation.states.LoginStates
 import com.example.fitme_up.feature_login.presentation.viewmodels.LoginViewModel
+import com.example.fitme_up.feature_register_coach.data.service.request.RegisterCoachRequest
+import com.example.fitme_up.feature_register_coach.data.service.request.RegisterCoachSchedules
 import com.example.fitme_up.register.RegisterActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers

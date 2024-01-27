@@ -8,9 +8,10 @@ import com.example.fitme_up.feature_login.data.service.request.LoginRequest
 import com.example.fitme_up.feature_login.data.service.response.LoginResponse
 import javax.inject.Inject
 
-class LoginRepository @Inject constructor() : BaseRepository<LoginApiService>(
-    LoginApiService::class.java,
-    RetrofitBuilderModule.provideUserEndpointBuilder()
+class LoginRepository @Inject constructor() :
+    BaseRepository<LoginApiService>(
+        LoginApiService::class.java,
+        RetrofitBuilderModule.provideUserEndpointBuilder()
 ) {
     suspend fun login(request: LoginRequest): BaseResultData<LoginResponse> {
         return executeApiCall {

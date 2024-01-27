@@ -8,7 +8,8 @@ import com.example.fitme_up.feature_register_admin.data.service.request.Register
 import com.example.fitme_up.feature_register_admin.data.service.response.RegisterAdminResponse
 import javax.inject.Inject
 
-class RegisterAdminRepository @Inject constructor() : BaseRepository<RegisterAdminApiService>(
+class RegisterAdminRepository @Inject constructor() :
+    BaseRepository<RegisterAdminApiService>(
     RegisterAdminApiService::class.java,
     RetrofitBuilderModule.provideUserEndpointBuilder()
 ) {
