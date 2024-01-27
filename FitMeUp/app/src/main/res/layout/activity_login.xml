@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:gravity="center"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="35sp"
+        android:text="WELCOME"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Enter your email and password to login"
+        android:layout_gravity="center"/>
+
+
+    <EditText
+        android:id="@+id/input_register_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textSize="15dp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/input_register_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="15dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_button_birutua"
+        android:backgroundTint="@color/birutua"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="Sign In"
+        android:textSize="20sp"
+        app:backgroundTint="@null" />
+
+    <TextView
+        android:id="@+id/forgotPasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="13sp"
+        android:text="Forgot Password?"
+        android:clickable="true"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New user?"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/registerButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/kuning"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

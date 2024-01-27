@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ShowIn="nav_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_sharp_home"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/nav_book"
+        android:icon="@drawable/ic_sharp_content_paste_search"
+        android:title="Book a Venue"/>
+
+    <item
+        android:id="@+id/nav_myBook"
+        android:icon="@drawable/ic_sharp_inventory"
+        android:title="My Booking"/>
+
+    <item
+        android:id="@+id/nav_LFG"
+        android:icon="@drawable/ic_sharp_reduce_capacity"
+        android:title="LFG"/>
+
+    <item
+        android:id="@+id/nav_cup"
+        android:icon="@drawable/ic_sharp_emoji_events"
+        android:title="Cup" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_sharp_account_circle"
+        android:title="Settings"/>
+
+</menu>

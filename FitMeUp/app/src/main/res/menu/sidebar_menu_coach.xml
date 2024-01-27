@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ShowIn="nav_view">
+
+    <item
+        android:id="@+id/nav_home_coach"
+        android:icon="@drawable/ic_sharp_home"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/nav_request_coach"
+        android:icon="@drawable/ic_sharp_content_paste_search"
+        android:title="Coaching History"/>
+
+    <item
+        android:id="@+id/nav_profile_coach"
+        android:icon="@drawable/ic_sharp_account_circle"
+        android:title="My Profile"/>
+
+    <item
+        android:id="@+id/nav_withdraw_coach"
+        android:icon="@drawable/ic_wallet"
+        android:title="Withdraw Balance"/>
+
+</menu>

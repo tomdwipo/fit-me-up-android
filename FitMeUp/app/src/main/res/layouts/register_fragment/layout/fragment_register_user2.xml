@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".register.RegisterUserFragment2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Fit Me-Up"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Choose Your Favorite Sport"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:text="You can choose one or both sports"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp">
+
+                <ImageButton
+                    android:id="@+id/btn_select_badminton"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_button_biru"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="50dp"
+                    android:scaleType="fitCenter"
+
+                    android:src="@drawable/shuttlecock" />
+
+                <TextView
+                    android:id="@+id/text_select_badminton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginVertical="10dp"
+                    android:gravity="center"
+                    android:text="Badminton"
+                    android:textColor="@color/birutua"
+                    android:textSize="20sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <ImageButton
+                    android:id="@+id/btn_select_futsal"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_button_biru"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="50dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/soccer_ball" />
+
+                <TextView
+                    android:id="@+id/text_select_futsal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginVertical="10dp"
+                    android:gravity="center"
+                    android:text="Futsal"
+                    android:textColor="@color/birutua"
+                    android:textSize="20sp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Your Domicile"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/spinner_user_register_domicile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_register_user_select_sport"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/rounded_button_birutua"
+        android:backgroundTint="@color/birutua"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="Continue"
+        android:textSize="20sp"
+        app:backgroundTint="@null" />
+
+</FrameLayout>

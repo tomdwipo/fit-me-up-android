@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/assetbackground"
+    tools:context=".LandingActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/assetlandingpage"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome To FitMe-Up!"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Join us to get the best experience in sports!"
+        android:textSize="13sp"
+        android:layout_marginTop="3dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button_birutua"
+        android:backgroundTint="@color/birutua"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="Login Now!"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:backgroundTint="@null" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or you don't have an account?"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/registerButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click Here"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/kuning"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

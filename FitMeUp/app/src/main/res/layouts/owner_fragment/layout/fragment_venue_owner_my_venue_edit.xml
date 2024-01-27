@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".venueowner.VenueOwnerMyVenueEdit">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="18dp"
+                android:text="Edit Venue"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="18dp"
+                    android:orientation="vertical">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/venuePager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="20dp" />
+
+                    <Button
+                        android:id="@+id/btn_edit_venue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:paddingVertical="0dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rounded_button_birutua"
+                        android:backgroundTint="@color/birutua"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="Edit Image"
+                        android:textSize="16sp"
+                        app:backgroundTint="@null"/>
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Venue Name"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/input_register_venue_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Venue Name"
+                        android:singleLine="true"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Venue Address"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/input_register_venue_field_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Venue Address"
+                        android:singleLine="true"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Venue Max Player"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/input_register_venue_max_player_badminton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Venue Max Player"
+                        android:singleLine="true"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Venue Price per Hour"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/input_register_venue_price_badminton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rp."
+                        android:singleLine="true"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Venue Opening Day"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/dayLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/input_coach_price">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <LinearLayout
+                                android:id="@+id/layout_monday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/check_monday"
+                                    android:layout_width="200dp"
+                                    android:layout_height="30dp"
+                                    android:text="Monday"
+                                    android:textSize="18sp" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textAlignment="center"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_tuesday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/check_tuesday"
+                                    android:layout_width="200dp"
+                                    android:layout_height="30dp"
+                                    android:text="Tuesday"
+                                    android:textSize="18sp" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textAlignment="center"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_wednesday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/check_wednesday"
+                                    android:layout_width="200dp"
+                                    android:layout_height="30dp"
+                                    android:text="Wednesday"
+                                    android:textSize="18sp" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textAlignment="center"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_thursday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/check_thursday"
+                                    android:layout_width="200dp"
+                                    android:layout_height="30dp"
+                                    android:text="Thursday"
+                                    android:textSize="18sp" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textAlignment="center"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_friday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/check_friday"
+                                    android:layout_width="200dp"
+                                    android:layout_height="30dp"
+                                    android:text="Friday"
+                                    android:textSize="18sp" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textAlignment="center"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_saturday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/check_saturday"
+                                    android:layout_width="200dp"
+                                    android:layout_height="30dp"
+                                    android:text="Saturday"
+                                    android:textSize="18sp" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textAlignment="center"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_sunday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/check_sunday"
+                                    android:layout_width="200dp"
+                                    android:layout_height="30dp"
+                                    android:text="Sunday"
+                                    android:textSize="18sp" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textAlignment="center"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="00:00"
+                                    android:inputType="time"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Upload Venue Image"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!--field buat upload gambar venue-->
+                    <EditText
+                        android:id="@+id/input_register_venue_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Select Image"
+                        android:singleLine="true"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Venue Description"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/input_register_venue_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Venue Description"
+                        android:inputType="textMultiLine"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_venue_edit_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginVertical="20dp"
+                        android:background="@drawable/rounded_button_birutua"
+                        android:backgroundTint="@color/birutua"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="Save"
+                        android:textSize="20sp"
+                        app:backgroundTint="@null" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

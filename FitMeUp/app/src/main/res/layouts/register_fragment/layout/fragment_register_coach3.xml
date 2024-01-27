@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".register.RegisterCoachFragment3">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:text="FIT ME UP"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="Pick Your Schedule"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:text="you can choose more than one"
+                    android:textSize="18sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dayLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/input_coach_price">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/layout_monday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/checkbox_monday"
+                                android:layout_width="200dp"
+                                android:layout_height="30dp"
+                                android:text="Monday"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/input_monday_start_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/input_monday_end_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_tuesday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/checkbox_tuesday"
+                                android:layout_width="200dp"
+                                android:layout_height="30dp"
+                                android:text="Tuesday"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/input_tuesday_start_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/input_tuesday_end_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_wednesday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/checkbox_wednesday"
+                                android:layout_width="200dp"
+                                android:layout_height="30dp"
+                                android:text="Wednesday"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/input_wednesday_start_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/input_wednesday_end_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_thursday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/checkbox_thursday"
+                                android:layout_width="200dp"
+                                android:layout_height="30dp"
+                                android:text="Thursday"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/input_thursday_start_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/input_thursday_end_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_friday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/checkbox_friday"
+                                android:layout_width="200dp"
+                                android:layout_height="30dp"
+                                android:text="Friday"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/input_friday_start_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/input_friday_end_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_saturday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/checkbox_saturday"
+                                android:layout_width="200dp"
+                                android:layout_height="30dp"
+                                android:text="Saturday"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/input_saturday_start_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/input_saturday_end_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_sunday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/checkbox_sunday"
+                                android:layout_width="200dp"
+                                android:layout_height="30dp"
+                                android:text="Sunday"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/input_sunday_start_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/input_sunday_end_hour"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="00:00"
+                                android:enabled="false"
+                                android:inputType="time"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/registerButtonCoach3"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/rounded_button_birutua"
+                app:backgroundTint="@null"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginBottom="50dp"
+                android:backgroundTint="@color/birutua"
+                android:text="Continue"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</FrameLayout>

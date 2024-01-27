@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".user.cup.CupEditTeam">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Team Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Team Name"
+                app:layout_constraintTop_toBottomOf="@+id/text_team_name" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Team Name"
+                app:layout_constraintTop_toBottomOf="@+id/text_team_domicile" />
+
+            <TextView
+                android:id="@+id/text_team_domicile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Team Domicile"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+            <TextView
+                android:id="@+id/text_team_sports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Team Sports"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+            <Spinner
+                android:id="@+id/spinner_cup_team_sport"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_team_sports" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Team Members"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spinner_cup_team_sport" />
+
+            <TextView
+                android:id="@+id/text_team_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Players"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+            <Button
+                android:id="@+id/btn_cup_team_invite"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_button_birutua"
+                android:backgroundTint="@color/birutua"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="Invite Player"
+                android:textSize="14sp"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="@+id/text_team_num"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView30" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_team_player"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_team_num"
+                tools:listitem="@layout/recycler_cup_team_edit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/btn_cup_team_edit_save"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/rounded_button_birutua"
+                android:backgroundTint="@color/birutua"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="Save Team"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_cup_team_edit_cancel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_cup_team_edit_cancel"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_bg"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="Cancel"
+                android:textColor="@color/birutua"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_cup_team_edit_save"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_cup_team_leave"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:layout_gravity="bottom"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:layout_marginVertical="10dp"-->
+<!--                android:background="@drawable/button_bg"-->
+<!--                android:foreground="?attr/selectableItemBackground"-->
+<!--                android:text="Leave Team"-->
+<!--                android:textColor="@color/birutua"-->
+<!--                android:textSize="20sp"-->
+<!--                android:visibility="gone"-->
+<!--                app:backgroundTint="@null"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

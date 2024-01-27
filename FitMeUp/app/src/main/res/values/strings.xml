@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">FitMe-Up</string>
+    <string name="title_activity_register2">Register2</string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="sport_list">
+        <item>Badminton</item>
+        <item>Futsal</item>
+    </string-array>
+
+    <string-array name="domicile_list">
+        <item>Jakarta Pusat</item>
+        <item>Jakarta Selatan</item>
+        <item>Jakarta Barat</item>
+        <item>Jakarta Timur</item>
+        <item>Jakarta Utara</item>
+    </string-array>
+
+    <string-array name="venue_list">
+        <item>Grand Sports Center Kuningan</item>
+        <item>Ciputat One Futsal</item>
+        <item>Supreme Arena Badminton</item>
+    </string-array>
+
+    <string-array name="bank_list">
+        <item>BCA</item>
+
+    </string-array>
+
+    <string-array name="coaching_time">
+        <item>06:00</item>
+        <item>07:00</item>
+        <item>08:00</item>
+        <item>09:00</item>
+    </string-array>
+
+    <string-array name="coaching_day">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <string-array name="venue_time">
+        <item>08:00</item>
+        <item>09:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+    </string-array>
+
+    <string name="user_home_title">Home</string>
+    <string name="user_book_coach_title">Book a Coach</string>
+    <string name="user_book_title">Book a Venue</string>
+    <string name="user_mybook_title">My Booking</string>
+    <string name="user_lfg_title">LFG</string>
+    <string name="user_cup_title">Cup</string>
+    <string name="user_setting_title">Settings</string>
+
+    <string name="coach_home_title">Home</string>
+    <string name="coach_request_title">Coaching History</string>
+    <string name="coach_request_details_title">Request Details</string>
+    <string name="coach_my_profile_title">My Profile</string>
+    <string name="coach_withdraw_title">Withdraw</string>
+
+    <string name="venue_home_title">Home</string>
+    <string name="venue_book_history_title">Booking History</string>
+    <string name="venue_my_venue_title">My Venue</string>
+    <string name="venue_cup_title">Cup</string>
+    <string name="venue_withdraw_title">Withdraw</string>
+
+
+</resources>

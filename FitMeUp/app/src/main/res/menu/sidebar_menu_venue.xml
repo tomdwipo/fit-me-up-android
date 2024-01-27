@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home_venue"
+        android:icon="@drawable/ic_sharp_home"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/nav_booking_history_venue"
+        android:icon="@drawable/ic_sharp_content_paste_search"
+        android:title="Booking History"/>
+
+    <item
+        android:id="@+id/nav_myvenue_venue"
+        android:icon="@drawable/ic_sharp_content_paste"
+        android:title="My Venue"/>
+
+    <item
+        android:id="@+id/nav_cup_venue"
+        android:icon="@drawable/ic_sharp_emoji_events"
+        android:title="Cup"/>
+
+    <item
+        android:id="@+id/nav_withdraw_venue"
+        android:icon="@drawable/ic_wallet"
+        android:title="Withdraw Balance"/>
+
+</menu>
