@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 
 }
 
@@ -11,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.fitme_up"
-        minSdk = 33
+        minSdk = 32
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -74,6 +76,8 @@ android {
     }
 }
 
+
+
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
@@ -107,4 +111,15 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
+
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+
+
+    implementation(libs.service.retrofit.converter)
+    implementation(libs.service.retrofit)
+    implementation(libs.service.gson)
+    implementation(libs.service.retrofit.logging)
+    implementation(libs.androidx.datastore)
+    implementation(libs.kotlinx.serialization.json)
 }

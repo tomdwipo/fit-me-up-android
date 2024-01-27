@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.fitme_up.LoginActivity
+import com.example.fitme_up.feature_login.presentation.screens.LoginActivity
 import com.example.fitme_up.R
 import com.example.fitme_up.viewmodel.ViewModelSelectSport
 import com.example.fitme_up.blueprint.RegisterUserInput

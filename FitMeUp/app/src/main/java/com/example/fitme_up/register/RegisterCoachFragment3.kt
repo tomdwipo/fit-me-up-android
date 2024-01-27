@@ -12,7 +12,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.fitme_up.LoginActivity
+import com.example.fitme_up.feature_login.presentation.screens.LoginActivity
 import com.example.fitme_up.R
 import com.example.fitme_up.RetrofitClient
 import com.example.fitme_up.blueprint.DataResponse

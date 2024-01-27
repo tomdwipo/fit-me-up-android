@@ -9,7 +9,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.fitme_up.LoginActivity
+import com.example.fitme_up.feature_login.presentation.screens.LoginActivity
 import com.example.fitme_up.R
 import com.example.fitme_up.viewmodel.ViewModelSelectSport
 

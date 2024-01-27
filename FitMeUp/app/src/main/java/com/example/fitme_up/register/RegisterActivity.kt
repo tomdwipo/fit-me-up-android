@@ -3,7 +3,7 @@ package com.example.fitme_up.register
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.fitme_up.LoginActivity
+import com.example.fitme_up.feature_login.presentation.screens.LoginActivity
 import com.example.fitme_up.R
 
 class RegisterActivity : AppCompatActivity() {
