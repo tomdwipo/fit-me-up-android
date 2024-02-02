@@ -16,7 +16,7 @@ import javax.inject.Singleton
 object LoginDataModule {
     @Singleton
     @Provides
-    fun provideLoginRepository(): LoginRepository = LoginRepository()
+    fun provideLoginRepository(userDataStoreRepository: UserDataStoreRepository): LoginRepository = LoginRepository(userDataStoreRepository = userDataStoreRepository)
 }
 
 

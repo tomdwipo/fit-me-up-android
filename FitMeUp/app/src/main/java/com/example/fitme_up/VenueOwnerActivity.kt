@@ -20,8 +20,11 @@ import com.example.fitme_up.venueowner.VenueOwnerHome
 import com.example.fitme_up.venueowner.VenueOwnerMyVenue
 import com.example.fitme_up.venueowner.VenueOwnerWithdraw
 import com.google.android.material.navigation.NavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class VenueOwnerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
 
     lateinit var drawerLayout: DrawerLayout
     lateinit var toggle: ActionBarDrawerToggle

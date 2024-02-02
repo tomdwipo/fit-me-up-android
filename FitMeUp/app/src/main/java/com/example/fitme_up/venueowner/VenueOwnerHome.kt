@@ -12,7 +12,9 @@ import com.example.fitme_up.viewmodel.ViewModelFragmentTag
 import com.example.fitme_up.venueowner.adapter.VenueOwnerHomePagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class VenueOwnerHome : Fragment() {
 
     private lateinit var viewPager: ViewPager2

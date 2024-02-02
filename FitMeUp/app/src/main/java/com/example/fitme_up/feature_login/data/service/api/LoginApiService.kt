@@ -4,6 +4,7 @@ import com.example.fitme_up.feature_login.data.service.request.LoginRequest
 import com.example.fitme_up.feature_login.data.service.response.LoginResponse
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
 
@@ -13,4 +14,9 @@ interface LoginApiService {
         @Body request: LoginRequest
     ): Response<LoginResponse>
 
+
+    @GET("coach")
+    suspend fun getCoaches(
+        @Header("Authorization") auth: String,
+    ): Response<LoginResponse>
 }

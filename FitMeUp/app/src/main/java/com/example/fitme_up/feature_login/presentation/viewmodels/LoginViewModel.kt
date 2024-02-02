@@ -26,4 +26,13 @@ class LoginViewModel @Inject constructor(
             else -> LoginStates.UNKNOWN
         }
     }
+
+    suspend fun coaches() {
+        val call = usecase.coaches()
+        val response = withContext(Dispatchers.IO) { call }
+        if (response.isSuccess){
+            //TODO: do something
+        }
+
+    }
 }

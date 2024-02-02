@@ -10,7 +10,10 @@ import java.io.File
 import javax.inject.Inject
 
 interface RegisterVenueUsecase {
-    suspend fun registerVenue(request: RegisterVenueRequest, fileRequest:List<File>): BaseResultData<RegisterVenueResponse>
+    suspend fun registerVenue(
+        request: RegisterVenueRequest,
+        fileRequest:List<File>
+    ): BaseResultData<RegisterVenueResponse>
 }
 
 

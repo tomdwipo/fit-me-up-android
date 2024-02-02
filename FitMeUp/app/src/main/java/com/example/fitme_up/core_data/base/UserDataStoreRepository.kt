@@ -35,6 +35,16 @@ class UserDataStoreRepository(
         return repository.readFromDataStore(UserDataStoreKeys.USER_ID_KEY)
     }
 
+    suspend fun saveFullName(name: String){
+        val repository = DataStoreRepository(context.userDataStore)
+        repository.saveToDataStore(UserDataStoreKeys.FULLNAME, name)
+    }
+
+    fun getFullname(): Flow<String?> {
+        val repository = DataStoreRepository(context.userDataStore)
+        return repository.readFromDataStore(UserDataStoreKeys.FULLNAME)
+    }
+
     suspend fun clearUserSession() {
         val repository = DataStoreRepository(context.userDataStore)
         repository.clearAll()

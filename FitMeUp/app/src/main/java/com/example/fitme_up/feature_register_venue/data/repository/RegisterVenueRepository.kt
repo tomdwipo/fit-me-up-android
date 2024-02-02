@@ -17,7 +17,10 @@ class RegisterVenueRepository @Inject constructor() : BaseRepository<RegisterVen
     RegisterVenueApiService::class.java,
     RetrofitBuilderModule.provideUserEndpointBuilder()
 ) {
-    suspend fun registerVenue(request: RegisterVenueRequest, fileRequest:List<File> ): BaseResultData<RegisterVenueResponse> {
+    suspend fun registerVenue(
+        request: RegisterVenueRequest,
+        files:List<File>
+    ): BaseResultData<RegisterVenueResponse> {
         val fullname = request.fullName.toRequestBody("text/plain".toMediaTypeOrNull())
         val email = request.email.toRequestBody("text/plain".toMediaTypeOrNull())
         val password = request.password.toRequestBody("text/plain".toMediaTypeOrNull())
@@ -55,9 +58,11 @@ class RegisterVenueRepository @Inject constructor() : BaseRepository<RegisterVen
             "venueTimeClose" to venueTimeClose,
             "venueDescription" to venueDescription,
             )
+
         var fileParts = ArrayList<MultipartBody.Part>()
-        for ((index, file) in fileRequest.withIndex()){
-            val fileReqBody = file.asRequestBody("image/PNG".toMediaTypeOrNull())
+
+        for ((index, file) in files.withIndex()){
+            val fileReqBody = file.asRequestBody("image/*".toMediaTypeOrNull())
             val part = MultipartBody.Part.createFormData("venuePhotos[$index]", file.name, fileReqBody)
             fileParts.add(part)
         }

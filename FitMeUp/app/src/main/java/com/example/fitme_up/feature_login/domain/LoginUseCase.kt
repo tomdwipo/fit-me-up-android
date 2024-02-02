@@ -11,7 +11,9 @@ import javax.inject.Inject
 
 interface LoginUseCase {
     suspend fun login(request: LoginRequest): BaseResultData<LoginResponse>
+    suspend fun coaches(): BaseResultData<LoginResponse>
 }
+
 
 
 
@@ -26,5 +28,10 @@ class LoginUseCaseImpl @Inject constructor(
             userDataStoreRepository.saveUserSession(response.data?.token ?: "")
         }
         return response
+    }
+
+    override suspend fun coaches(): BaseResultData<LoginResponse> {
+        val coaches = repository.getCoaches()
+        return withContext(Dispatchers.IO) { coaches }
     }
 }

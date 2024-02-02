@@ -57,6 +57,10 @@ class RegisterFragment : Fragment() {
             tran?.addToBackStack(null)
         }
         roleOwnerButton.setOnClickListener() {
+            //TODO: create function for pick image from gallery or camera
+
+            //TODO: response pick image change to FILE type
+
             //TODO: EXAMPLE how to upload
            viewModel.viewModelScope.launch(Dispatchers.IO) {
                val drawableId = R.drawable.image_1
