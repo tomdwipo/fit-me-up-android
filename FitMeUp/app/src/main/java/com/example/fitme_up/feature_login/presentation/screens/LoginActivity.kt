@@ -27,6 +27,7 @@ import kotlinx.coroutines.withContext
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
     private val loginViewModel: LoginViewModel by viewModels()
+
     lateinit var registerBtnText: TextView
     lateinit var loginBtn: Button
     lateinit var emailInput: EditText
@@ -44,6 +45,7 @@ class LoginActivity : AppCompatActivity() {
         passwordInput =  findViewById(R.id.input_register_password)
 
         loginBtn.setOnClickListener {
+
             loginViewModel.viewModelScope.launch {
                 val result = loginViewModel.login(
                     request = LoginRequest(
