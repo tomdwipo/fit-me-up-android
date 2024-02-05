@@ -18,7 +18,7 @@ class LoginViewModel @Inject constructor(
     suspend fun login(request: LoginRequest): LoginStates {
         val call = usecase.login(request)
         val response = withContext(Dispatchers.IO) { call }
-        return when(response.data?.role){
+        return when(response.data?.roleId){
             1 -> LoginStates.ADMIN
             2 -> LoginStates.USER
             3 -> LoginStates.COACH

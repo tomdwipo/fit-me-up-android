@@ -66,7 +66,7 @@ class SettingsList : Fragment(), OnItemClickListener {
 //
 //        recyclerView.layoutManager = LinearLayoutManager(context)
 //        recyclerView.adapter = adapter
-
+//
 //        lifecycleScope.launch {
 //            viewModel.fetchDomicile()
 //            adapter.notifyDataSetChanged()

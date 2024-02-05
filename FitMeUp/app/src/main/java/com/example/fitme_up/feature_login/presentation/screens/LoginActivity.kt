@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.runtime.LaunchedEffect
 import androidx.lifecycle.viewModelScope
 import com.example.fitme_up.CoachActivity
 import com.example.fitme_up.R
@@ -16,13 +16,9 @@ import com.example.fitme_up.VenueOwnerActivity
 import com.example.fitme_up.feature_login.data.service.request.LoginRequest
 import com.example.fitme_up.feature_login.presentation.states.LoginStates
 import com.example.fitme_up.feature_login.presentation.viewmodels.LoginViewModel
-import com.example.fitme_up.feature_register_coach.data.service.request.RegisterCoachRequest
-import com.example.fitme_up.feature_register_coach.data.service.request.RegisterCoachSchedules
 import com.example.fitme_up.register.RegisterActivity
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
@@ -63,7 +59,8 @@ class LoginActivity : AppCompatActivity() {
                         startActivity(intent)
                     }
                     LoginStates.UNKNOWN -> {
-                        println("unknow")
+                        Toast.makeText(applicationContext, "Incorrect Email or Password!", Toast.LENGTH_SHORT).show()
+                        println("unknown")
                     }
                     LoginStates.USER -> {
                         val intent = Intent(applicationContext, UserActivity::class.java)
