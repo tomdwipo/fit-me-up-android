@@ -24,8 +24,9 @@ import com.example.fitme_up.user.lfg.LfgDetails
 import com.example.fitme_up.user.lfg.LfgFind
 import com.example.fitme_up.user.settings.SettingsList
 import com.google.android.material.navigation.NavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class UserActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var drawerLayout: DrawerLayout
