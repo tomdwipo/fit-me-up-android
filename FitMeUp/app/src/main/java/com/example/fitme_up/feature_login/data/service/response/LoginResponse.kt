@@ -10,5 +10,5 @@ import com.google.gson.annotations.SerializedName
 data class LoginResponse(
     @SerializedName("message") var message: String = "",
     @SerializedName("token") var token: String = "",
-    @SerializedName("role") var role: Int = 0
+    @SerializedName("roleId") var roleId: Int = 0
 )

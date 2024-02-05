@@ -101,4 +101,5 @@ class RegisterFragment : Fragment() {
         // Return the File object for further use
         return file
     }
+    //
 }

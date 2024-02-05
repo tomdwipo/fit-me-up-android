@@ -1,17 +1,26 @@
 package com.example.fitme_up.user.booking
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitme_up.R
-import com.example.fitme_up.user.adapter.bookingAdapter.FindCoachAdapter
-import com.example.fitme_up.user.dataset.CoachListData
+import com.example.fitme_up.feature_get_coaches.data.service.request.GetCoachesRequest
+import com.example.fitme_up.feature_get_coaches.data.service.response.GetCoachesResponse
+import com.example.fitme_up.feature_get_coaches.presentation.screens.FindCoachAdapter
+import com.example.fitme_up.feature_get_coaches.presentation.viewmodels.GetCoachesViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class BookingCoachFind : Fragment(){
+    private val viewModel: GetCoachesViewModel by viewModels()
+    private lateinit var adapter: FindCoachAdapter
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
@@ -34,22 +43,42 @@ class BookingCoachFind : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
         recyclerView = requireView().findViewById(R.id.coachRecycleList)
+        adapter = FindCoachAdapter(listOf(), BookingCoachFind())
 
         viewManager = LinearLayoutManager(context)
         recyclerView.layoutManager = viewManager
 
-        val dataList2 = listOf(
-            CoachListData("Coach 1", "Badminton", "Jakarta Selatan", "081122334455"),
-            CoachListData("Coach 2", "Badminton", "Jakarta Selatan", "081573462455"),
-            CoachListData("Coach 3", "Badminton", "Jakarta Selatan", "081124582455"),
-            CoachListData("Coach 4", "Futsal", "Jakarta Selatan", "081123572455"),
-            CoachListData("Coach 5", "Badminton", "Jakarta Pusat", "081124583475"),
-            CoachListData("Coach 6", "Badminton", "Jakarta Barat", "081124347900"),
-            CoachListData("Coach 7", "Badminton", "Jakarta Pusat", "08115673453"),
-            CoachListData("Coach 8", "Futsal", "Jakarta Timur", "081123452355")
-        )
-        viewAdapter = FindCoachAdapter(dataList2, this)
-        recyclerView.adapter = viewAdapter
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = adapter
+
+        viewModel.viewModelScope.launch {
+            val coachlist = listOf<GetCoachesResponse>()
+
+            viewAdapter = FindCoachAdapter(coachlist, BookingCoachFind())
+
+            val request = GetCoachesRequest()
+            val listCoaches = viewModel.getCoaches(request)
+            adapter = FindCoachAdapter(coachlist, BookingCoachFind())
+
+            recyclerView.adapter = adapter
+            viewAdapter.notifyDataSetChanged()
+        }
+
+
+
+
+        //        val dataList2 = listOf(
+//            CoachListData("Coach 1", "Badminton", "Jakarta Selatan", "081122334455"),
+//            CoachListData("Coach 2", "Badminton", "Jakarta Selatan", "081573462455"),
+//            CoachListData("Coach 3", "Badminton", "Jakarta Selatan", "081124582455"),
+//            CoachListData("Coach 4", "Futsal", "Jakarta Selatan", "081123572455"),
+//            CoachListData("Coach 5", "Badminton", "Jakarta Pusat", "081124583475"),
+//            CoachListData("Coach 6", "Badminton", "Jakarta Barat", "081124347900"),
+//            CoachListData("Coach 7", "Badminton", "Jakarta Pusat", "08115673453"),
+//            CoachListData("Coach 8", "Futsal", "Jakarta Timur", "081123452355")
+//        )
+//        viewAdapter = FindCoachAdapter(dataList2, this)
+//        recyclerView.adapter = viewAdapter
 
 //        skipBtn.setOnClickListener {
 //            val userFrag = BookingVenueFind()
