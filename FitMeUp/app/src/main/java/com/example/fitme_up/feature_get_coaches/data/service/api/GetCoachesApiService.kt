@@ -12,7 +12,6 @@ interface GetCoachesApiService {
     @GET("coach")
     suspend fun getCoaches(
         @Header("Authorization") auth: String,
-        @Body request: GetCoachesRequest
     ): Response<GetCoachesResponse>
 
 }

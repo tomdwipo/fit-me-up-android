@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 //{
 //    "message": "Login success!",
 //    "token": "Nw._kvE663vuQ4c_LkfGo0_m6eAp73zSDRgMyU09EHvaTRoY4Oz3H73WyGlcZ57",
-//    "role": 1
+//    "roleId": 1
 //}
 data class LoginResponse(
     @SerializedName("message") var message: String = "",

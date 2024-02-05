@@ -17,7 +17,7 @@ class GetCoachesRepository @Inject constructor(private val userDataStoreReposito
     ) {
     suspend fun getCoaches(): BaseResultData<GetCoachesResponse> {
         return executeApiCall(userDataStoreRepository) { auth ->
-            restInterface.getCoaches("Bearer ${auth ?: ""}", GetCoachesRequest())
+            restInterface.getCoaches("Bearer ${auth ?: ""}")
         }
     }
 }

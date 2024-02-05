@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitme_up.R
 import com.example.fitme_up.feature_get_coaches.data.service.request.GetCoachesRequest
+import com.example.fitme_up.feature_get_coaches.data.service.response.CoachesData
 import com.example.fitme_up.feature_get_coaches.data.service.response.GetCoachesResponse
 import com.example.fitme_up.feature_get_coaches.presentation.screens.FindCoachAdapter
 import com.example.fitme_up.feature_get_coaches.presentation.viewmodels.GetCoachesViewModel
@@ -43,21 +44,17 @@ class BookingCoachFind : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
         recyclerView = requireView().findViewById(R.id.coachRecycleList)
-        adapter = FindCoachAdapter(listOf(), BookingCoachFind())
-
         viewManager = LinearLayoutManager(context)
         recyclerView.layoutManager = viewManager
-
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = adapter
 
         viewModel.viewModelScope.launch {
-            val coachlist = listOf<GetCoachesResponse>()
+            var coachlist = listOf<CoachesData>()
 
             viewAdapter = FindCoachAdapter(coachlist, BookingCoachFind())
 
-            val request = GetCoachesRequest()
-            val listCoaches = viewModel.getCoaches(request)
+            coachlist = viewModel.getCoaches() ?: listOf()
+
             adapter = FindCoachAdapter(coachlist, BookingCoachFind())
 
             recyclerView.adapter = adapter

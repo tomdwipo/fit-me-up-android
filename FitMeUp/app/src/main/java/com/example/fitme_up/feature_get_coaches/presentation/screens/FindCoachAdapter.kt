@@ -9,14 +9,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitme_up.OnButtonClickListener
-import com.example.fitme_up.OnItemClickListener
 import com.example.fitme_up.R
-import com.example.fitme_up.feature_get_coaches.data.service.request.GetCoachesRequest
+import com.example.fitme_up.feature_get_coaches.data.service.response.CoachesData
 import com.example.fitme_up.feature_get_coaches.data.service.response.GetCoachesResponse
 import com.example.fitme_up.user.booking.BookingCoachDetails
-import com.example.fitme_up.user.dataset.CoachListData
 
-class FindCoachAdapter(private val myDataset: List<GetCoachesResponse>, private val parentFragment: Fragment) :
+class FindCoachAdapter(private val myDataset: List<CoachesData>, private val parentFragment: Fragment) :
     RecyclerView.Adapter<FindCoachAdapter.MyViewHolder>(), OnButtonClickListener {
 
     inner class MyViewHolder(itemView: View, private val listener: OnButtonClickListener) : RecyclerView.ViewHolder(itemView) {
@@ -25,9 +23,9 @@ class FindCoachAdapter(private val myDataset: List<GetCoachesResponse>, private 
 //        val textView3: TextView = itemView.findViewById(R.id.text_recycler_subtitle2)
 //        val textView4: TextView = itemView.findViewById(R.id.text_recycler_subtitle_right2)
 
-        fun bind(item: GetCoachesResponse) {
-            textView1.text = item.data[position].full_name
-            textView2.text = item.data[position].favSports.toString()
+        fun bind(item: CoachesData) {
+            textView1.text = item.full_name
+            textView2.text = item.favSports.toString()
 
             itemView.findViewById<Button>(R.id.btn_view_details).setOnClickListener {
                 listener.onButtonClick()
@@ -42,8 +40,8 @@ class FindCoachAdapter(private val myDataset: List<GetCoachesResponse>, private 
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item = myDataset[position]
-        holder.textView1.text = item.data[position].full_name
-        holder.textView2.text = item.data[position].favSports.toString()
+        holder.textView1.text = item.full_name
+        holder.textView2.text = item.favSports.toString()
 
         holder.itemView.findViewById<Button>(R.id.btn_view_details).setOnClickListener {
             this.onButtonClick()

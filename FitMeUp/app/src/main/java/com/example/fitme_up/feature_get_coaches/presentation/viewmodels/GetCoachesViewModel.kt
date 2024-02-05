@@ -3,6 +3,7 @@ package com.example.fitme_up.feature_get_coaches.presentation.viewmodels
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.fitme_up.feature_get_coaches.data.service.request.GetCoachesRequest
+import com.example.fitme_up.feature_get_coaches.data.service.response.CoachesData
 import com.example.fitme_up.feature_get_coaches.data.service.response.GetCoachesResponse
 import com.example.fitme_up.feature_get_coaches.domain.GetCoachesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,15 +17,13 @@ class GetCoachesViewModel @Inject constructor(
 ) : ViewModel() {
 
 
-    suspend fun getCoaches(request: GetCoachesRequest): String {
+    suspend fun getCoaches(): List<CoachesData>? {
         val call = usecase.getCoaches()
         val response = withContext(Dispatchers.IO) { call }
         return if (response.isSuccess){
-            Log.d("print", request.toString())
-            response.data?.message ?: ""
-
+            response.data?.data
         }else{
-            ""
+            listOf()
         }
     }
 }
